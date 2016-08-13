@@ -1,0 +1,131 @@
+#Desafío Latam
+
+##Clase Nro 2
+*09-Aug-16*
+
+###Comandos
+
+- man: Manual de comandos.
+- cp: Para copiar archivos Ej: cp archivo destino
+- cp -r: Copia recursivamente. Es decir para copiar carpetas
+
+**/var**: Archivos de contenido variable, es decir que van creciendo a medida que se usa el sistema. Por lo general son de gran tamaño.
+
+
+El archivo .bash_profile se encuentra en la carpeta personal ~
+
+Se puede abrir el archivo con el comando: nano .bash_profile
+Tambien se puede encontrar esta configuracion en .bashrc
+
+- which: Nos indica donde esta guardado el programa, en que ruta.
+
+###Variables:
+
+- Variables de Entorno: Son variables que se declaran en el terminal que al cerrarlo  y volverlo a abrir se pierde. Ej A=1, al abrir de nuevo se pierde. Son variables asociadas al entorno de ejecucion. Es un identificador que tiene un nombre y se le asigna un valor.
+- PS1: BUSCAR INFO....
+
+_Stack_: Pila de software o kit.
+
+Cada interfaz tiene un manjeador de paquete. 
+
+- apt-get install: Este comando instala . Ej: apt-get install vim En este caso instalariamos vim.
+- apt-get 
+- Links: BUSCAR INFO...
+- env: Comando utilizado para mostrar todas las variables que estan definidas.
+- echo $nombrevariable: con este comando se muestra que contiene una variable siempre va con el signo $.
+
+
+**Definicion de variable a nivel de la terminal: BASH**
+Para definir se necesita un nombre que no puede inicar con espacio no puede iniciar con un numero. Si es texto o cadena de caracteres se debe colocar entre comillas.Ej: hola="texto". No se puede escribir hola = "texto", ya que el bash interpreta que es un comando.
+
+Si quisieramos que esta variable creada a nivel de la terminal, sea una variable de entorno (Que este disponible en todos los procesos hijos y que se pueda ver a traves de env) se usa el comando export. Ej: export hola
+
+Para que las variables persistan se usan archivos de configuracion. Estos ciertos archivos se cargan cuando el computador inicia. El primero es .bash_profile que es uno de los mas importantes.
+
+En esta edicion de texto, usando el comando vim o nano. Ej: nano .bash_profile podemos agregar las variables para que persistan. ahi, escribiriamos:
+- export a=1
+- export b=2
+- export c=3
+
+
+El comando source actualiza la informacion que tiene actualmente el bash_profile. Ej: source .bash_profile
+
+###PERMISOS
+
+Iniciemos por recordar que el comando ls funciona con dos parametros que son l y a. l lista los parametros con mas detalle. a muestra los archivos ocultos.
+
+Siempre los permisos estan asociados a usuarios, grupos y personas no asociados a estos.
+
+####Aprender a leer la linea de permiso:
+- primera letra (d ó -): Si tiene una d quiere decir que es un directorio si tiene un guion es que es un archivo.
+- Tres letras siguientes: r Read w Write x Execute. para el **USUARIO**
+- Tres letras del medio: **GRUPO**
+- Tres ultimas letras: **Resto del mundo**
+
+Esta linea esta conformada por:
+- Letras que indican el permiso. Ej: drwxr-xr--
+- Dueño del archivo. Ej: usuario
+- Grupo: Ej: staff 
+- Fecha de creacion: Indica cuando fue creado el archivo.
+- Nombre del directorio o archivo.
+
+
+Los grupos es una manera de clasificar, una especie de categoria. 
+
+Comando **chmod** se utiliza para modificar los permisos de los archivos. Ej: chmod +x archivo1 Esto permite que el archivo1 pueda ser ejecutado por todos. Modos de uso:
+
+- Dar o quitar privilegio a **Resto del Mundo**:
+    - chmod +x Esto da privilegios para ejecutar
+    - chmod -x Esto quita privilegios para ejecutar
+    - La x puede ser lectura (r) o escritura (w), depende de lo que se requiera.
+
+- Dar o quitar privilegio a **USUARIO**:
+    - chmod u+w Esto da privilegio al usuario para escribir
+    - chmod u-w Esto quita privilegio al usuario para escribir
+    - De igual manera la w puede ser cambiado porlo que se necesita.
+
+- Dar o quitar privilegio a **GRUPO**:
+    - chmod g+w Esto da privilegio al usuario para escribir
+    - chmod g-w Esto quita privilegio al usuario para escribir
+    - De igual manera la w puede ser cambiado porlo que se necesita.
+
+**REMARK**: Si se quiere hacer con una capreta que tiene archivos dentro, de igual manera se debe hacer de forma recursiva, para ello se ejecuta con -R, si mayúscula. Ej: chmod -R carpeta_con_contenido
+
+Otra manera de aplicar permisos es a traves de numeros, quiere decir que cada letra vale un numero y la suma de estos se traduce en los permisos que se quieren dar. Seria:
+- r: vale 4
+- w: vale 2
+- x: vale 1
+
+Ej: chmod 764 archivo En este caso decimos que el usuario puede leer, escribir y ejecutar. El grupo solo leer y escribir. Y otros solo pueden leer.
+
+
+####Comando id
+Permite conocer la identidad del usuario y los grupos a los que pertenece
+
+####Comando chown
+Change Owner, permite el cambio de propietario y grupo de archivos o directorios mediante la sintaxis chown user:group archivo
+
+####Comando chgrp
+Permite el cambio de grupo propietario para archivos o directorios mediante: chgrp grupo archivo
+
+###ROOT
+
+Con el comando **sudo** se toman los privilegios temporales del usuario root, de tal manera que se ejecute como root de forma momentanea para evitar mal uso del usuario administrador.
+
+Para cambiar de usuarios podemos usar **su**:
+- su nombre_usuario
+- Ej: su root
+
+Para salir se ejecuta **exit**
+
+El comando **visudo** permite editar las condiciones de sudo de un usuario. No todousuario tiene derecho a sudo.
+
+
+
+
+
+
+
+
+
+

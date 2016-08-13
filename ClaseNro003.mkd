@@ -1,0 +1,240 @@
+#Desafío Latam
+
+##Clase Nro 3
+*10-Aug-16*
+
+### Control de Versiones
+
+Sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo.
+
+Ventajas:
+
+* Permite recuperar versiones de un código.
+* Ayuda a gestionar cambios hechos por distintas personas.
+* Permite tener un historial de cambios.
+
+Existen dos tipos de sistemas de control, los centralizados y los distribuidos.
+
+
+####Sistemas de control de versiones Centralizados:
+
+Conocidos como CVSs (Centralized Version Control Systems) poseen un único servidor que contiene todos los archivos versionados. Los clientes decargan los archivos de ese lugar central.
+
+Ventajas:
+
+- Todos pueden saber en que se esta trabajando.
+- Los administradores tienen control de que hace cada uno.
+- Es mas fácil de administrar.
+
+Desventajas:
+
+- Si falla el servidor falla el desarollo del proyecto.
+- Si el disco duro donde se encuentra la información falla, no se tiene un respaldo verídico.
+
+####Sistemas de control de versiones Distribuidos:
+
+Conocidos como DVCS (Distributed Version Control Systems), al estilo Git, Mercurial o Darcs. Permiten a los clientes no sólo descargar la última instantánea de los archivos. Si no que, siel servidor muere, cualquiera de los repositorios de los clientes puede copiarse en el servior para restaurarlo.
+
+
+
+###GIT definicion y usos
+
+**GIT:** Sistema de control distribuido.
+
+
+Permite recuperar versiones especificas de un código y ayuda a gestionar los cambios hechos por varios colaboradores.
+
+Este tipo de registro, permite encontrar en que momento se introdujo un cambio que causa errores.
+
+Es imposible cambiar los contenidos de cualquier archivo sin que Git lo sepa. Esto se debe a que todo es verificado mediante un checksum. El mecanismo que se usa para generar el checksum se conoce como **hash SHA-1**. Es una cadena de 40 caracteres hexadecimalesy se calcula en base a los contenidos del archivo o estructura de directorios.
+
+
+####Los tres estados de GIT:
+Git tiene tres estados principales en los que se pueden encontrar sus archivos:
+
+* Confirmado (**Committed**): Significa que los datos están almacenados de manera segura en tu base de datos local.
+* Modificado (**Modified**): Significa que has modoficado el archivo pero todavía no lo has confirmado a tu base de datos.
+* Preparado (**Staged**) Significa que has marcado un archivo modificado en su version actual para que vaya en tu proxima confirmación.
+
+####Flujo de trabajo en GIT:
+Esta basado en tres pasos:
+
+1. **Modificas** una serie de archivos en tu directorio de trabajo.
+2. **Preparas** los archivos añadiendolos a tu area de preparación.
+3. **Confirmas** los cambios,haciendo que GIT tome los archivos como estan en el area de preparación y almacena las instsantaneas de manera permanente en el directorio Git.
+
+
+Para saber si lo tenemos instalado: **`git --version`**
+
+Para saber como esta configurado tu GIT: **`git config --list`**
+
+Si necesitas configurarlo:
+
+-   `git config --global user.name "Tu Nombre"`
+-   `git config --global user.email tucorreo`
+
+####Como crear un proyecto en git:
+
+Nos debemos parar a traves del terminal en la carpeta que queremos crear el proyecto, y ejecutamos:
+`git init`
+
+Que lo que hace es crear un directorio .git, e inicializa el repositorio.
+
+Este .git es donde se guarda la "magia". Este se inicializa una sola vez y no se debe hacer de nuevo. **Esto se debe hacer por cada proyecto**
+
+Luego de esto procedemos a crear un archivo: `touch hola.txt`
+
+Comando que siempre usaremos es `git status` que te indica el estado actual del repositorio git.
+
+El flujo de trabajo de git es:
+
+- Area de trabajo: donde se tienen los archivos. Basicamente se tiene una carpeta y vas creando archivos. (html, css, imagenes). Es decir si tienes 3 proyectos tienes tres carpetas.
+- Area de preparacion (stage): Es donde se elige que es lo que se desea versionar. Ya que no necesariamente todo lo queremos versionar.
+- Head: Apunta al ultimo commit realizado
+
+
+**git add** Se utiliza para agregar un archivo al area stage. `git add hola.txt`.
+
+**git commit** Se utiliza para indicar a git que registre los cambios de un archivo. `git commit -m "descriptor" hola.txt`.
+
+**git log** Permite ver la historia de un proyecto. Para cada archivo se genera un codigo unico de commit que depende del tamano y contenido de este, por ellos es unico e irrepetible.
+
+**git status** Te indica el estado actual del repositorio git.
+
+**git reset** Se utiliza para deshacer un commit. Ej: `git reset --soft HEAD~`
+
+Tambien se puede usar para sacar los archivos del area de staging. Ej: `git reset HEAD prueba1`
+
+
+
+
+####Checksum:
+Se calcula en base al contenido y tamaño del archivo. 
+
+
+*Tip:* Si quieres borrar el .git usa: rm -r .git
+
+Ejemplo:
+
+1. Creamos una carpeta donde queremos tener el proyecto:
+    - mkdir gitprueba
+2. Dentro de la carpeta inicializaremos el repositorio git:
+    - git init
+3. Creamos un archivo al proyecto:
+    - touch hola.txt
+4. Procedemos a agregarlo al area stage:
+    - git add hola.txt
+5. Ahora confiraremos los cambios que hemos hecho, es decir haremos un commit:
+    - git commit -m "comentario" hola.txt
+    - **NOTA**: Si quisieramos hacer commit de todos los archivos se agragaria el atributo **a** al comando commit.
+6. Ahora mostraremos los logs de lo realizado:
+    - git log
+
+**Consejo** Si deseas ver el arbol de archivos de tu proyecto de manera grafica, se puede hacer con: gitk
+
+agregando -ammend se logra eliminar el ultimo commit por este nuevo, esto es util cuando se olvido agregar un archivo o cuando se quiere cambiar el nombre de un commit.
+Ej:
+    - git commit -m "cambio 2 reemplazado" archivo1 archivo2
+
+
+Ejemplo:
+
+1. Inicializamos git dentro de una nueva carpeta llamada desafio_git2:
+    - mkdir desafio_git2
+    - cd desafio_git2
+    - git init
+2. Dentro creamos el archivo index.html, agregaro y confirmarlo.
+    - touch index.html
+    - get add index.html
+    - git commit -m "nuevo" index.html
+3. Modificamos el archivo poniendo tu nombre y guardarlo:
+    - gedit index.html
+    - Se edita el archivo se guarda.
+    - git commit -m "minombre" index.html
+4. 3. Modificamos el archivo poniendo nombre de profesor y guardarlo:
+    - gedit index.html
+    - Se edita el archivo se guarda.
+    - git commit -m "profe" index.html -amend
+
+Si deseas recuperar una version del historial, basta con usar: ** git checkout 'codigochecksum'**
+
+####Branches // Ramas:
+
+Permiten coordinar trabajo con varias personas, implementar cambios complejos.
+
+Son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama "master" es la rama pordefecto cuando creas un repositorio. 
+
+Para ver las ramas en el repositorio se usa:
+
+    - git branch
+
+Para crear una rama se utiliza:
+
+    - git branch rama1
+
+Para cambiar de rama se utiliza:
+
+    - git checkout rama2
+
+
+Para hacer merge de las ramas nuevas con el master se hace de la siguiente manera:
+
+    - Te ubicas enla rama quedeseas hacer merge:
+    - ejecutas git merge rama1
+    - Listo hace merge de rama1 con master.
+
+
+Hay casos de conflictos endonde dos desarrolladores tocan la misma linea de codigo, en este caso git no puede reconocer cual debe prevalecer, en esta situacion se debe resolver manualmente.
+
+
+Los conflictos se resuelven entrandoa la linea donde esta elproblema y puedes elegir manualmente que linea de codigo debe permanecer.
+
+Ejemplo:
+git commit -am "final"
+
+**HACER EJERCICIO EN CASA**
+
+Eliminar una rama ya merged: git branch -d rama
+Eliminar una rama no merged: git branch -D rama
+
+
+Mezcla fastforward implica un merge que convierte la rama creada inicial y las fusiona en una sola 
+
+con git checkout -b ramanueva
+
+te crea una rama nueva y automaticamante te hace el cambio
+
+ git reset HEAD prueba1 LEER
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

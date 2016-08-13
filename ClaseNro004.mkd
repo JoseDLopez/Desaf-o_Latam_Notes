@@ -1,0 +1,82 @@
+#Desafío Latam
+
+##Clase Nro 4
+*11-Aug-16*
+
+
+###GIT HUB
+Es un gestor de GIT. Alternativas (Gitlab).
+
+Como envia GIT la informaciona GitHub:
+
+Utiliza un tunel SSH donde se encriptala informacion usando la llave privada que ya generaste previamente. 
+
+Debemos crear enuestro computador dos llaves, privada y publica.
+
+Se hace de la siguiente manera:
+`ssh-keygen -t rsa -b 4096 -C "tucorreo@correo.com"`
+
+La carpeta SSH se llama **.ssh** y se encuentra en tu usuario.
+Los archivos de las llaves se llaman: **id_rsa** y **id_rsa.pub**
+
+Luego en GitHub debemos agregar esta nueva llave. Al seleccionar agregarnueva llave, debemos abrir el archivo de clave publico **id_rsa.pub** y lo que tiene ese archivo lo copias completamente y lo pegas en el campo de textopara la clave. Colocas un titulo y la guardas.
+
+Es decir:
+
+1. Generas lallave con el comando `ssh-keygen -t rsa -b 4096 -C "tucorreo@correo.com"`
+2. Presionas tresveces enter.
+3. Ahora debes ir a la carpeta **.ssh**.
+4. Buscar el archivo **id_rsa** y abrirlo.
+5. Copiar el contenido de este archivo en el campo de GitHub.
+6. Confirar que la conexion es exitosa: `ssh -T git@github.com`
+7. Finalmente deberia salir un mensaje de éxito.
+
+Ahora crearemos un repositorio en git, y seleccionamos que queremos cargarlo a traves de un proyecto existente.
+
+Esto te generara un link como este: `git remote add origin git@github.com:JoseDLopez/demo_test.git`
+
+Debes copiar esto en la carpeta de tu proyecto, de esta manera generas un nuevo origen para que git sepa 
+
+Este funciona de esta manera git remote add NOMBRE URL
+
+**SE HACE UNA VEZ POR PROYECTO**
+
+para comprobar que todo esta correcto se hace  ´git remote -v´
+
+Ahora haces push para subir esta informacion desde tu pc al github con:
+´git push -u origin master´
+
+Y se deberia sincronizar la carpeta.
+
+
+####CLONACION
+Es tomar un proyecto existente y trabajar en el como si fuesemi presente.
+
+Para clonar se copiala URL declonar entregada por git hub
+
+Luegovamos a una carpeta nueva donde queremos colocar el nuevo proyecto.
+
+`git clone URL Nombredenuevoarchivo`
+
+
+####PULL cambios
+git pull hace un fetch y un merge.
+Es decir:
+
+1. **push**: Enviamos todos los cambios confirmadosal remote.
+2. **fetch**: Recuperamos todos los cambios del remote.
+3. **pull**: Recuperamos todos los cambios del remote y lo aplicamos al branch (merge).
+
+
+####REMOTE
+
+
+
+
+
+
+
+
+
+
+

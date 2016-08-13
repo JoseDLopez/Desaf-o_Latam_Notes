@@ -1,0 +1,70 @@
+#Desafío Clase Nro004
+
+_José Daniel López_
+
+###Parte I: El primer push
+
+1. Creamos una carpeta nueva llamada carpeta1:
+    - `mkdir carpeta1`
+2. Inicializamos git dentro:
+    - `cd carpeta1`
+    - `git init`
+3. Creamos un archivo llamado Readme.md con contenido hola, lo añadimos y hacemos el commit:
+    - `touch Readme.md`
+    - `nano Readme.md`
+    - `git add Readme.md`
+    - `git commit -m "nuevo archivo" Readme.md`
+4. Creamos un repo nuevo en github y seguimos las instrucciones para agregar el remote:
+    - `git remote add origin git@github.com:JoseDLopez/Desafio004.git`
+
+5. Hacemos push al remote (git push origin master):
+    - `git push origin master`
+
+###Parte II: El primer Clone
+
+1. Clonamos el repositorio en una carpetanueva que llamaremos carpeta2:
+    - `git clone git@github.com:JoseDLopez/Desafio004.git carpeta2`
+2. Vemos el remote y lo comparamos con el remote del proyecto anterior:
+    - `cd carpeta2`
+    - `ls -a`
+    - `nano Readme.md`
+3. Agregamos al final del archivo Readme.md el texto "soy un clone" y hacemos push:
+    - `git commit -m "agregadoclone" Readme.md`
+    - `git push origin master`
+4. Revisar que en github se vean los cambios.
+    - Efectivamente se ven los cambios.
+
+###Parte III: El primer Fetch
+
+1. Volvemos a la carpeta1:
+    - `cd ..`
+    - `cd carpeta1`
+2. Hacemos un fetch:
+    - `git fetch origin master`
+3. Revisamos el archivo Readme.md y confirmamos que no se ven cambios:
+    - `nano Readme.md`
+4. Hacemos el merge del branch descargado:
+    - `git merge origin/master`
+5. Efectivamente se ven los cambios.
+
+###Parte IV: El primer pull
+
+1. Dentro de la misma carpeta1, al final del archivo escribiremos "preparando un pull" luego commit y push:
+    - `nano Readme.md`
+    - `git commit -m "pull" Readme.md`
+    - `git push origin master`
+2. Volvemos a la carpeta2. Esta vez en lugar de hacer fetch hacemos pull y veremos dentro de nuestro directorio el cambio aplicado.
+    - `cd ..`
+    - `cd carpeta2`
+    - `git pull origin master`
+
+
+
+
+
+
+
+
+
+
+

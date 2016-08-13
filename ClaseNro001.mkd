@@ -1,0 +1,133 @@
+#Desafío Latam
+
+##Clase Nro 1
+*08-Aug-16*
+
+###Terminal
+
+Interprete de comandos, conocido como bash, permite a traves de comandos ejecutar ciertas tareas o programas. Es **Importante** ya que ciertos lenguajes de programacion se manejan por medio de la terminal (Rails).
+
+Te permite manejar ciertas habilidades utiles y ventajas como profesional.
+
+**Objetivos**
+
+- Moverse entre directorios.
+- Crear, copiar y borrar archivos.
+- Manejar el sistema de permisos.
+- Instalar desinstalar programas.
+
+
+*Tips*
+
+- Alt + F2 = Ejecutar
+- Tecla inicio + Tel = Terminal
+- Ctrl + Alt + T = Terminal
+
+Por defecto la terminal de Ubuntu es Gnome o Nome.
+
+Antes del @ se ubica el usuario. Luego del usuario se encuentra el host name, el nombre de la maquina. Es decir el nombre con el cual te identificas en la red.
+
+Luego finalmente se encuentra el signo $, que indica la finalizacion del prompt. De ahi hacia adelante se debe introducir el comando.
+
+Los comandos son basicamente programas con argumentos.
+
+#####Comandos basicos
+- ls : Listar.
+- pwd: muestra donde estamos ubicados.
+- man: Manual, nos indica documentacion sobre el comando, es decir es como una guia de uso. Muestra todos los flags y argumentos que se pueden usar. Para salir de este comando se presiona la letra *q*.
+
+#####Estructura de directorios
+
+Todo parte de una raíz mejor conocido como **/** siendo entonces una estructura tipo árbol (directorios, carpetas, archivos).
+
+*Tip:* En LINUX el terminal es Case Sentitive, es decir si hay diferencias entre mayusculas y minusculas.
+
+*Tip:* En LINUX pueden ubicarse graficamente en una carpeta y con click derecho seleccionar abrir en terminal. Y se abrirá la termina con la ubicacion de la carpeta en la que te encuentras.
+
+#####Ruta Abosulta vs Ruta Relativa
+- Ruta Absoluta: o PATH es la ruta que Ej: Ezequiel Allenda #, Providencia, Santaigo, Chile. Quiere decir que cualquier persona con esta direccion puede llegar. Parten con **/**
+- Ruta Relativa: Son rutas que no indican por completo la ubicacion o el destino. Ej: Con indicaciones no claras y especificas. Depende de donde nos encontremos parados.
+
+*Tip:* Al presionar tabulador en la terminal, esta automaticamente autocompletará a una palabra acorde. De esta manera se ahorra tiempo.
+
+Para llegar automaticamente a home, basta con ejecutar **cd**.
+
+El caracter **~** se interpreta como el usuario, por ello es posible ejecutar rutas absolutas predecedidas por este caracter. Directorio HOME o carpeta personal.
+
+Regresamos a los comandos...
+
+- Comando ls: si colocamos el atributo -a muestra archivos ocultos. Si colocamos el -l, muestra mas informacion acerca de tamaño y permisos de los archivos.
+- cd. Quiere decir que accedo al mismo punto.
+- cd.. Quiere decir que acceso al directorio superior a donde estoy. Ej: cd../var/www Quiere decir que retrocedimos un directorio y luego accedimos a dos.
+
+*Tip:* Es posible utilizar el caracter * que funciona como comodin, de tal manera que implica todo. Ej: find / -name *.php Quiere decir que va a buscar todos los archivos que terminen en .php en la carpeta raiz.
+
+*Tip:* Con las fechas de hacia arriba y hacia abajo se puede mover entre comandos ejecutados anteriormente. Estos comandos ejecutados se pueden ver con el comando **history** 
+
+*Tip:* No utilizar espacios.
+
+#####Interactuando con Carpetas
+
+Comandos:
+- mkdir: Este comando permite crear directorios. Ej: mkdir demo_terminal El archivo se crea donde estas ubicado en ese momento en la terminal.
+- mv: Se utiliza para renombrar, pero en realidad el comando quiere decir mover, es decir el primer argumento es el nombre de la carpeta que quieres cambiar el nombre y el segundo es el nuevo nombre. Ej: mv carpeta nueva_carpeta Ejemplo para mover: mv nueva_carpeta /home/escritorio
+- touch: Utilizado para crear archivos. Ej: touch archivo1
+- file: Puedes saber que tipo de archivo es. Ej: file archivo1
+- rm: Comando para borrar archivos. Ej: rm archivo1
+- rm -r: Para poder borrar carpetas. El argumento r significa forma recursiva, que implica que va a tomar el archivo mas pequeño que tiene la carpeta y va a aplicar el comando de ahi hacia arriba. Ej: rm -r carpeta
+- rmdir: Comando utilizado para borrar directorios vacios. rmdir carpetavacia
+
+**REMARK** Las extensiones en linux no existen. Con el comando file puedes saber que tipo de archivo es.
+
+#####Interactuando con archivos
+
+Exiten comandos útiles al momento de manipular archivos.
+
+**REMARK** En linux existe una carpeta que se llama /var/log donde se guardan archivos sobre cuando el sistema falla. Estos guardan mucha informacion.
+
+- cat: Muestra lo que contiene un archivo en pantalla. Hace un print del contenido. Sin abrirlo. Ej: cat suelto.txt
+- tail: Muestra las últimas 10 líneas de texto de un archivo seleccionado. Ej: tail boot.log . Tambien se puede usar tail -n boot.log, muestra las ultimas  lineas.
+- head: Comando parecido a tail pero muestra son las primeras lineas.
+- nano y vim: Son dos editores de texto desde la terminal. El estandar es vim y el mas básico es nano.
+- vim: se edita el texto. Ej: vim suelto.txt
+- diff: Muestra la diferencia entre dos archivos. Ej: diff archivo1 archivo2
+
+Cuando se ejecuta un comando linux sabe automaticamente a donde ir, debido a que existe algo que se llama **PATH** que es donde se almacenan todos los comandos que se ejecutaran. El sistema maneja unas variables con las que el sistema ubica los comandos.
+
+Si se ejecuta echo $PATH el sistema muestra todas las carpetas donde estan los comandos almacenados.
+
+Es decir cuando ejecutamos un comando que no existe es porque el sistema busca dentro de todas esas carpetas.
+
+- echo $PATH: Nos muestra las carpetas en donde se almacenan los comandos. Es una lista de acciones. Es la lista que indica todos los programas que opodemos cargar directamente.
+- which: nos indica cual es el origen o directorio del comando. Ej: which ls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
