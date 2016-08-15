@@ -192,7 +192,6 @@ Los conflictos se resuelven entrandoa la linea donde esta elproblema y puedes el
 Ejemplo:
 git commit -am "final"
 
-**HACER EJERCICIO EN CASA**
 
 Eliminar una rama ya merged: git branch -d rama
 Eliminar una rama no merged: git branch -D rama
@@ -204,8 +203,25 @@ con git checkout -b ramanueva
 
 te crea una rama nueva y automaticamante te hace el cambio
 
- git reset HEAD prueba1 LEER
- 
+####Resumen de comandos:
+- Inicia el respositorio git
+    * `git add archivo`
+- Agrega el archivo a staging
+    * `git add archivo`
+- Agrega todos los archivos a staging
+    * `git commit .`
+- Confirma el set de cambios.
+    * `git commit 'm "" -amend`
+- Cancela el último commit y vuelve a staging
+    * `git reset-soft HEAD~`
+- Cancela el último comit y saca los archivos de staging
+    * `git reset-hard HEAD~`
+- Muestra los branches disponibles
+    * `git branch`
+- Borra el branch nombrado
+    * `git branch -d nombrebranch`
+- Borra el brach aunque no haya hecho merge
+    * `git branch -D nombrebranch`
 
 
 

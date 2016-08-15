@@ -69,6 +69,12 @@ Es decir:
 
 
 ####REMOTE
+Para manipular los remotes que tenemos agregados podemos ejecutar los siguientes comandos:
+
+- Muestra todos los remotes disponibles
+    * `git remote -v`
+- Borra el remote origin
+    * `git remote rm origin`
 
 
 

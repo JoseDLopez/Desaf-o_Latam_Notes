@@ -69,6 +69,7 @@ Regresamos a los comandos...
 #####Interactuando con Carpetas
 
 Comandos:
+
 - mkdir: Este comando permite crear directorios. Ej: mkdir demo_terminal El archivo se crea donde estas ubicado en ese momento en la terminal.
 - mv: Se utiliza para renombrar, pero en realidad el comando quiere decir mover, es decir el primer argumento es el nombre de la carpeta que quieres cambiar el nombre y el segundo es el nuevo nombre. Ej: mv carpeta nueva_carpeta Ejemplo para mover: mv nueva_carpeta /home/escritorio
 - touch: Utilizado para crear archivos. Ej: touch archivo1
@@ -94,12 +95,12 @@ Exiten comandos útiles al momento de manipular archivos.
 
 Cuando se ejecuta un comando linux sabe automaticamente a donde ir, debido a que existe algo que se llama **PATH** que es donde se almacenan todos los comandos que se ejecutaran. El sistema maneja unas variables con las que el sistema ubica los comandos.
 
-Si se ejecuta echo $PATH el sistema muestra todas las carpetas donde estan los comandos almacenados.
+Si se ejecuta `echo $PATH` el sistema muestra todas las carpetas donde estan los comandos almacenados.
 
 Es decir cuando ejecutamos un comando que no existe es porque el sistema busca dentro de todas esas carpetas.
 
 - echo $PATH: Nos muestra las carpetas en donde se almacenan los comandos. Es una lista de acciones. Es la lista que indica todos los programas que opodemos cargar directamente.
-- which: nos indica cual es el origen o directorio del comando. Ej: which ls
+- which: nos indica cual es el origen o directorio del comando. Ej: `which ls`
 
 
 
