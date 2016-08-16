@@ -1,0 +1,22 @@
+#Desafío Latam
+
+##Clase Nro 5
+*16-Aug-16*
+
+##Notas clase previa
+
+En el caso de que se quiera sincronizar el git con tu servidor donde tienes alojada tu pagina, debes conseguir un servidor que tu puedas programar y configurar directamente o puedes escoger un servidor que tenga disponible git para usarlo.
+
+La manera en que funciona es:
+    - Remoto: Maquina donde se hace el desarrollo, y se modifica codigo.
+    - Github: Servidor donde se almacena el codigo o modificaciones "nube"
+    - Servidor Web: Ultimo paso donde simplemente se presenta la pagina, en este caso solo se hace pull para sincronizar.
+
+###HTML
+
+Primer paso, editores: programa que permite la edicion de texto
+
+Pero tambien tenemos los **IDE**, Entorno Integrado de Desarrollo, que permite a traves de una serie de aplicaciones o programas permite otras funcionalidades adicionales.
+
+
+
