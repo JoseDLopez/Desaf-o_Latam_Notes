@@ -60,6 +60,7 @@ Se pide:
 3. chmod g+rw rights
 4. chmod u+x rights
 5. chmod o+r rights
+6. chmod u-rw rights // quita permisos
 
 
 
