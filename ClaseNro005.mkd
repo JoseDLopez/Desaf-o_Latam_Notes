@@ -20,3 +20,65 @@ Pero tambien tenemos los **IDE**, Entorno Integrado de Desarrollo, que permite a
 
 
 
+HTML Es, Hyper Text Markup Language. Es un lenguaje semantico, es decir se define lo que significan las cosas, mas no el aspecto.
+
+Funciona haciendo uso de etiquetas. Etiquetas de apertura y cierre:
+    - `<etiqueta>...<etiqueta>`
+
+**DOM**: Document Object Model
+
+####Estructura básica de un doumento de HTML:
+
+1. Etiqueta de marcado. `<html>...</html>`
+2. Cabecera `<head>...</head>` Informacion que el usuario no ve pero que es útil para el navegador.
+
+    2.1 Titulo `<title>...</title>`
+    
+3. Body `<body>...</body>` Lo que el usuario si ve.
+
+
+HTML es un lenguaje interpretado, en este caso el interpretador es el navegador. El consorcio encargado de establecer los estandares es W3C.
+
+####Anatomia de una etiqueta:
+Tienen inicio, atributo y final:
+
+
+**TIP:** Recomiendan usar un H1 por página ya que se posiciona muy bien con los navegadores.
+
+**TIP**: El strong no es que pone la letra en negrita, lo que hace es que indica que esa palabra tiene énfasis.
+
+**TIP**: La etiquieta emphasis, indica una énfasis en menor grado.
+
+**TIP**: Placehold, pagina que te indica el tamano en pixeles.
+
+este es un atributo para un link.
+
+Target: La manera enque se abre un enlace, puede ser:
+    - blank: se abra en una nueva pagina o pestaña.
+    - self: se abre en la misma pagina.
+
+
+alt, es un atributo muy importante para la etiqueta de imagenes, ya que el navegador interpreta este.
+
+title, es bueno para el posicionamiento ya que es el titulo de la foto.
+
+
+Listas:
+
+Existen dos tipos de listas, las listas ordenadas y no ordenadas.
+
+#####Figure:
+Una figura no es solo foto tambien va acompañada de contenido asociado, que intenta hacer, es por ejemplo, reflejar la imagen con su pie de letra.
+
+
+Si quieres tener contenido HTML publicado en git hub, automaticamente puedes usar el branch **gh-pages** se debe llamar exactamente asi.
+
+Inspector de Elementos: Herramienta util para ver como esta formada la pagina web.
+
+
+En HTML5 se busca acabar con el DIVITS que es el uso abusivo de DIVs, pormedio de nuevas etiquetas que son Header, Footer, Aside, Article, Nav, Section.
+
+
+
+Iframe: Poder incorporar una pagina dentro de otra pagina.
+
