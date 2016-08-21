@@ -25,8 +25,6 @@ HTML Es, Hyper Text Markup Language. Es un lenguaje semantico, es decir se defin
 Funciona haciendo uso de etiquetas. Etiquetas de apertura y cierre:
     - `<etiqueta>...<etiqueta>`
 
-**DOM**: Document Object Model
-
 ####Estructura básica de un doumento de HTML:
 
 1. Etiqueta de marcado. `<html>...</html>`
@@ -49,36 +47,128 @@ Tienen inicio, atributo y final:
 
 **TIP**: La etiquieta emphasis, indica una énfasis en menor grado.
 
-**TIP**: Placehold, pagina que te indica el tamano en pixeles.
+**TIP**: https://placehold.it/, pagina que te indica el tamano en pixeles.
 
-este es un atributo para un link.
+####Etiquetas básicas:
 
-Target: La manera enque se abre un enlace, puede ser:
-    - blank: se abra en una nueva pagina o pestaña.
-    - self: se abre en la misma pagina.
+- __Titulares__: Son las etiquetas de titulos, estas pueden ir desde h1 hasta h6. Son de tipo *BLOQUE*.
+    * Sintaxis: `<h1>Título 1</h1>`
+- __Párrafos__: Espacio donde se coloca texto. Son de tipo *BLOQUE*.
+    * Sintaxis: `<p>parrafo, texto</p>`.
+- __Enlaces__: Son etiquetas que cumplen la función de un lnk. Tienen un atributo que es blank o self, que sirve para indicar si el enlace se abre en una pestaña nueva o en la misma pagina. Son de tipo *LINEA*.
+    * Sinatxis: `<a href="url">Texto que ven los usuarios</a>`
+    * Ejemplo de atributo TARGET:
+        * `<a href="url" target="_blank">Texto que ven los usuarios</a>`. Abre el documento en una nueva ventana o pestaña.
+        * `<a href="url" target="_self">Texto que ven los usuarios</a>`. Abre el documento en el mismo cuadro en el que fue clickeado.
+        * `<a href="url" target="_parent">Texto que ven los usuarios</a>`. Abre el documento en un cuadro hijo.
+        * `<a href="url" target="_top">Texto que ven los usuarios</a>`. Abre el docmuento a tamaño completo en la ventana.
+- __Imágenes__: Esta etiqueta permite incluir imágenes. Son de tipo *LINEA*.
+    * Sintaxis: `<img src="url de la imagen">`.
+    * Atributo ALT: Es lo que interpreta el navegador y es muy importante para el posicionamiento. Ejemplo:
+        * `<img src="url de la imagen" alt="Texto Alternativo">`.
+    * Atributo TITLE: Es importante para el usuario porque permite indicar el titulo de la imágen. Ejemplo:
+        * `<img src="url de la imagen" alt="Texto Alternativo" title="Muestra de texto alternativo">`.
 
 
-alt, es un atributo muy importante para la etiqueta de imagenes, ya que el navegador interpreta este.
+####Listas ordenadas y listas no ordenadas:
+1. Listas ordenadas:
+Se generan listas ordenadas haciendo uso dela etiqueta `<ol>...</ol>`, pero de esta debemos incluir los elementos de la lsita, por medio de la etiqueta `<li>...</li>`.
+2. Listas no ordenadas:
+Se logran por medio de la etiqueta `<ul>...</ul>`, y de igual manera se deben agregar los elementos de la lista con `<li>...</li>`.
 
-title, es bueno para el posicionamiento ya que es el titulo de la foto.
+####Clases e identificadores:
+Las etiquetas o marcas en HTML pueden recibir nombres, estos pueden ser ID o CLASS.
+
+- ID: Los id son nombres únicos, es decir que sólo una etiqueta puede tener ese nombre. Ejemplo:
+    * `<p id="Primer_Parrafo">Lorem Ipsum</p>`.
+- CLASS: Son nombres que pueden repetirse y con el cual se pueden agrupar varias marcas. Ejemplo:
+    * `<p class ="parrafo">Lorem Ipsum</p>`.
 
 
-Listas:
+###DOM
+Es el Document Object Module, es una representación del HTML que permite a script y programas acceder y manipular dinamicamente el contenido de una pagina.
 
-Existen dos tipos de listas, las listas ordenadas y no ordenadas.
+####El inspector de ELEMENTOS:
+Podemos acceder a esta haciendo click derecho sobre la pagina y luego haciendo click en inspect. Este nos muestra el DOM del HTML y nos permite modificarlo.
 
-#####Figure:
-Una figura no es solo foto tambien va acompañada de contenido asociado, que intenta hacer, es por ejemplo, reflejar la imagen con su pie de letra.
+###DIVS & SPAN:
+
+1. DIVS: Los divs son marcas que permiten agrupar a otras marcas, usando exclusivamente html. Son de tipo *BLOQUE*. Ejemplo:
+`<div class="col-izq">
+    <h1> Titular </h1>
+    <h2> Titular 2 </h2>
+    <p> parrafo </p>
+</div>`
+2. SPAN: sirve para marcar texto, una parte de la palabra, una palabra o más. Son de tipo *LINEA*. Ejemplo: `<h1> Lorem <span class="destacar"> Ipsum </span>`.
+
+###Nuevas Etiquetas HTML5
+HTML5 implemento estos nuevos elementos semanticos para dilatar el abuso de los divs en los documentos.
+
+1. SECTION: Es un elemento que define una sección en el documento. Según el W3C es una agrupacion tematica de contenido. Típicamente con un encabezado. Una pagina web inicio, podría ser separada en secciones de introduccion, contenido e informacion de contacto. Ejemplo:
+    - `<section>`
+    - `<h1>WWF</h1>`
+    - `<p>The World Wide Fund for Nature (WWF)... </p>`
+    - `</section>`
+2. ARTICLE: Es un elemento que especifica independencia, contenido autoincluido. Un articulo deberia tener sentido por si propio, y deberia ser posible leerlo independientemente del resto de la pagina web. Se puede usar por ejemplo en: entradas de foros, entradas de blogs, articulos de periodicos. Ejemplo:
+    - `<article>`
+    - `<h1>What does WWF do?</h1>`
+    - `<p>WWF's mission is to...</p>`
+    - `</article>`
+3. HEADER: Especifica el encabezado de un documento o de una sección. El elemento `<header>` debe ser usado como contenedor para la introduccion del contenido. Se puede tener varios encabezados en un sólo documento. El siguiente ekjemplo define el header para un articulo:
+    - `<article>`
+    - `<header>`
+    - `<h1>What Does WWF Do?</h1>`
+    - `<p>WWF's mission:</p>`
+    - `</header>`
+    - `<p>WWF's mission is...</p>`
+    - `</article>`
+4. FOOTER: Este elemento especifica el footer de un documento o seccion. Puede contener informacion acerca de su elemento contenedor. Un pie, usualmente contiene el autor del documento, informacion de derechos de autor, terminos de uso, informacion de contacto, etc. Ejemplo:
+    - `<footer>`
+    - `<p>Posted by:</p>`
+    - `<p>Contact infor:</p>`
+    - `</footer>
+5. NAV: El elemento nav define una set de links de navegación. Esta comprendido for largos bloques de enlaces de navegación. Ejemplo:
+    - `<nav>`
+    - `<a href="/html/">HTML</a>`
+    - `<a href="/css/">CSS</a>`
+    - `<a href="/js/">JavaScript</a>`
+    - `<a href="/jquery/">jQuery</a>`
+    - `</nav>`
+6. ASIDE: El elemento aside define contenido ubicado al lado del contenido principal, algo así como una barra lateral. El contenido deberia estar relacionado con el contenido en referencia. Ejemplo:
+    - `<p>My family and I visited The Epcot Center</p>`
+    - `<aside>`
+    - `<h4>Epcot Center</h4>`
+    - `<p>The Epcot center is a...</p>`
+    - `</aside>`
+7. FIGURE: Se introdujo para poder implementar imagenes con informacion adicional al pie de la imagen la sintaxis sería algo asi:
+    * `<figure>`
+    * `<img src="/macaque.jpg" alt="Macaque in the trees" title="Macaque trees"/>`
+    * `<figcaption>A cheeky macaque, Lower Kintaganb an River, Borneo. Original by <a href="http://www.flickr.com/photos/rclark/"> Richard Clark</a><figcaption>`
+    * `</figure>`
+
+###TABLAS
+Se pueden realizar tablas a traves de la etiqueta `<table>...</table>`. Para agregar filas se utiliza `<tr>...</tr>`, mientras que para agregar columnas `<td>...</td>`. Ejemplo:
+
+    - `<table>`
+    - `<thead>`
+    - `<tr>`
+    - `<th>Titulo 1</th>`
+    - `<th>Titulo 2</th>`
+    - `</tr>`
+    - `</thead>`
+    - `<tbody>`
+    - `<tr>`
+    - `<td>Texto 1</td>`
+    - `<td>Texto 2</td>`
+    - `</tr>`
+    - `</tbody>`
+    - `</table>`
+
+###IFRAMES
+Con iframe, es posible integrar una página dentro de la misma página, un ejemplo de esto es Google con su maps. Ejemplo:
+`<iframe src="demo_iframe.htm" height="200" width="300"></iframe>`
 
 
 Si quieres tener contenido HTML publicado en git hub, automaticamente puedes usar el branch **gh-pages** se debe llamar exactamente asi.
 
-Inspector de Elementos: Herramienta util para ver como esta formada la pagina web.
-
-
-En HTML5 se busca acabar con el DIVITS que es el uso abusivo de DIVs, pormedio de nuevas etiquetas que son Header, Footer, Aside, Article, Nav, Section.
-
-
-
-Iframe: Poder incorporar una pagina dentro de otra pagina.
 
