@@ -1,0 +1,100 @@
+#Desafío Latam
+
+##Clase Nro 6
+*17-Aug-16*
+
+###Formularios
+Los formularios son utilizados para que el usuario pueda introducir informacion y completar campos que luego seran enviados para ser procesados o almacenados. La etiqueta que corresponde a los formularios es: `<form>...</form>`.
+
+Todo lo que incluya un formulario debe estar dentro de la etiqueta `<form>`. 
+
+####LABEL:
+Es utilizado para escribir texto en un form, su nombre se deberia asociar con su correspondiente campo de introduccion de texto. Ejemplo:
+
+- `<label for="campo.nombre">Nombre:</label>`
+
+
+####INPUTS:
+Son los campos donde el usuario introduce datos o informacion, existen varios tipos de input. Este es el elemento mas basico del formulario. Tienen varios atributos, el atributo *type* indica que tipo de input es, el atributo *name* le asigna un nombre al input, el atributo *id* le asigna un identificativo, con el que el label se referencia. Tambien tienen atributo *value* que es el valor que toma una vez que el usuario introduce los datos. Y por ultimo el *placeholder* que es un texto que se muestra en el campo para dar una pista al usuario de que debe introducir. Ejemplo:
+- `<input type="text" name="campo_nombre" id="campo_nombre" value="" placeholder="Ingrese su nombre">`
+
+**TIP**: Si se desea inhabilitar un campo se hace con el atributo *disabled*.
+
+**TIP**: Si se desea indicarque el campo es obligatorio, se hace con el atributo *required =""*.
+
+Un input de texto es como el ejemplo anterior, pero tambien existen input que son para indicar que se envíe el formulario, como el SUBMIT.
+
+#####SUBMIT
+Este boton una vez que es clickeado envia automaticamente la informacion que esta introducida en el fomrulario. Ejemplo:
+- `<input type="submit" name="aplicar" value="Apply">`
+
+#####BUTTON
+Define un elemento visual del boton.
+
+#####Email, Number, color:
+Ejemplos de cada tipo de input:
+
+- `<input type="email" name="email" id="campo_email" required="" value="" placeholder="Ingrese su email">`
+- `<input type="number" name="number" id="campo_numero" required="" value="" placeholder="Ingrese su numero">`
+- `<input type="color" value="" id="colores">`
+
+#####Radio
+Estos input son utilizados para cuando se desea que el usuario sólo seleccione una opcion de las posibles variables. Si se desea agrupar varios radio button para que no afecten otros, se pueden agrupar con el atributo name, los radio button que tengan el mismo name son los que se ven afectados por el comportamiento de ellos mismos.
+Ejemplo:
+
+- `<label for="Masculino">Masculino</label>`
+- `<input type="radio" id="Masculino" name="Genero" value="">`
+- `<label for="Femenino">Femenino</label>`
+- `<input type="radio" id="Femenino" name="Genero" value="">`
+
+#####CHECKBOX
+Son parecidos a los radio button, pero permiten multiples opciones. Ejemplo:
+
+- `<input type="checkbox" value="" name="check1" id="check1">`
+
+#####TEXT AREA
+Es un input que permite que el usuario introduzca multiples lineas de texto. Ejemplo:
+
+- `<textarea name="super_campo" id="super_campo" cols="30" rows="10">Utilizado para colocar mucho texto.</textarea>`
+
+#####SELECT
+Despliega una lista la cual permite seleccionar una o varias opciones dependendiendo del atributo asignado. Ejemplo:
+
+- `<select name="carros" id="carros" multiple="">`
+- `<option value="volvo">Volvo</option>`
+- `<option value="saab">Saab</option>`
+- `<option value="fiat">Fiat</option>`
+- `<option value="audi">Audi</option>`
+- `</select>`
+
+#####FILEDSET
+Permite agrupar los inputs de un formulario de tal manera que se puedan identificar por seccion. Ejemplo:
+
+- `<fieldset>`
+- `<legend>Ultimos</legend>`
+- `<label for="colores">Introduce colores:</label>`
+- `<input type="color" value="" id="colores">`
+- `</fieldset>`
+
+###METADATA
+Existen metadatas que nos permiten desribir mejor la página. Estas descripcones son usadas por las redes sociales. Entre ellos conocemos el OPEN GRAPH.
+
+####OPEN GRAPH
+OG, permite crear objetos enriquecidos para el grafo social de Facebook. Es decir, facilita el buscar, mostrar información de valor y compartir. La pagina es:  **http://ogp.me/**.
+De ahi aprendemos a usar:
+
+`<meta property="og:title" content="The Rock" />`
+
+`<meta property="og:type" content="video.movie" />`
+
+`<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />`
+
+`<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />`
+
+####GOOGLE ANALYTICS
+Este es un script de google que nos permite observar las visitas conectadas a nuestra pagina. Con el podemos, observar visitas en tiempo real, observar los diversos puntos de entrada de los usuarios, obtener el flujo de navegación de los usuarios en el sitio.
+
+
+
+
+
