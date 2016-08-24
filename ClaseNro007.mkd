@@ -1,0 +1,122 @@
+#Desafío Latam
+
+##Clase Nro 7
+*18-Aug-16*
+
+##CSS
+Cascading Style Sheet
+
+Hojas de estilo que se pueden incorporar dentro de HTML para darle forma y color.
+
+Existen 3 maneras de incorporar CSS dentro de una página web:
+
+- La primera es con un conjunto de atributos y valores dentro de la marca, del mismo html. Es decir a la marca o etiqueta, asignarle atributos en la misma linea. Ejemplo: `<html style="">...</html>`
+- La segunda consiste en agregar el CSS dentro del head del mismo documento. Usando la etiqueta *style*. Ejemplo: `<style>...</style>`.
+- La tercera forma consiste en utilizar un archivo externo, de extension .css.
+
+###CSS A NIVEL DE MARCA
+Para agregar CSS a nivel de marca, tenemos que agregar el atributo *style*  a una marca de HTML y dentro del valor agregaremos reglas de CSS.
+
+Ejemplo:
+`<html style="color:blue>...</html>`.
+
+*Tip*: Es posible agregar mas de una regla, separando con **;**.
+
+**REMARK**: En CSS la última definición es la que manda, por ello es importante saber el orden en que se estan definiendo parametros para una marca.
+
+La desventaja de utilizar el método inline (a nivel de marca), es que hace dificil al navegador comprimir y reutilizar los datos. Haciendo mas lenta la página web.
+
+###CSS A NIVEL DE HEAD
+Como segunda manera de agregar el estilo de hoja en cascada, tenemos la posibilidad de agregarlo en el elemento head de nuestra pagina. Usando la etiqueta *style*. Al realizarlo de esta manera, debemos especificar a que marca u etiqueta estamos asociando la edicion.
+
+Ejemplo:
+
+    <html>
+    <head>
+        <style>
+            body {
+                color:white; background-color:black;
+            }
+        </style>
+    </head>
+    </html>
+
+
+###CSS EXTERNO
+Es la tercera manera en la que se puede incluir CSS a una página web.  Consiste en agregar un link a un CCS externo. Para realizar esta asociacion, ocuparemos la etiqueta *link*, dentro del **head**.
+
+Ejemplo:
+
+`<link rel="stylesheet" type="text/css" href="mystyle.css">`
+
+####Reglas de ORO:
+
+* En CSS el concepto mas importante es el de cascada, cuando se aplica una regla aun selector padre automaticamente todos los hijos que puedan heredar lo heredan.
+* Tambien, que la gla mas especifica siempre manda sobre las otras.
+
+
+####OPERADORES COMBOS:
+
+Existen cuatro operadores especiales en CSS que nos permiten hacer selecciones màs especificas.
+
+* (espacio): Selecciona a los descendenientes. Ejemplo `div img`.
+* `>`: Selecciona a los descendientes directos (hijos). Ejemplo `div > img`.
+* `+`: Selecciona a los hermanos adyacentes. Ejemplo `div + div`.
+* `~`: Selecciona a los hermanos. Ejemplo `div ~ div`.
+
+
+###PSEUDO CLASES
+Permiten definir porpiedades en base al estado de un elemento. Por ejemplo, cuando el mouse se mueve por encima del elemento, o cambiar las propiedades de este cuando ya sea visitado.
+
+La sintaxis para un pseudo clase es: `selector:estado`.
+
+Pseudoselectores para LINKS:
+
+- Unvisited link: `a:link {color:red;}`
+- Visited link: `a:visited {color:black;}`
+- Selected link: `a:active {color: orange;}`
+
+Otros:
+
+* Mouse sobre parrafo: `p:hover {color:green;}`
+* Enfocar: `input:focus`
+* Primera linea: `p:first-lin`
+* Primera letra: `p:first-letter`
+
+
+Los pseudo-elementos :before y :after se utilizan en combinación con la propiedad content de CSS para añadir contenidos antes o después del contenido original de un elemento.
+
+Las siguientes reglas CSS añaden el texto Capítulo - delante de cada título de sección `<h1>` y el carácter . detrás de cada párrafo de la página:
+
+    h1:before { content: "Capítulo - "; }
+    
+    p:after   { content: "."; }
+    
+
+
+###TIPOGRAFIA
+Para cambiar la tipografia de una marca se debe usar la propiedad `font-family`. Ejemplo:
+
+    body {font-family: "Times New Roman", Georgia, Serif;}
+
+
+Una pagina muy útil es **Google Fonts**, http://www.google.com/fonts
+
+Nos permite cargar de forma sencilla diversas tipografias no tan comunes dentro del sitio.
+
+
+###CSS NORMALIZE
+Es un archivo CSS que permite normalizar elementos del documento html, para que se estandaricen las medidas. La página del creador es: https://necolas.github.io/normalize.css/
+
+###CAN I USE
+Permite identificar que marcas no son validas para algunos navegadores.
+http://caniuse.com
+
+
+
+
+
+
+
+
+
