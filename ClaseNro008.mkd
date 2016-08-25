@@ -1,0 +1,114 @@
+#Desafío Latam
+
+##Clase Nro 8
+*19-Aug-16*
+
+###SAFE FONTS
+Son aquellas tipografias que estan siempre disponibles en todos los navegadores.
+
+Es posible especificar el tamaño de una fuente de tres maneras:
+
+- font-size:20px, que se usa para especificar en pixeles.
+- font-size:large, la unidad es el tamaño.
+- font-size:100%, se refiere a un porcentaje de tamaño con respecto al elemento padre.
+
+Las fuentes y otros elementos tambien pueden ser especificados en tamaños relativos:
+
+1. **em**: Cuando em, es la unidad, significa que 1em es el tamaño tipografico del elemento padre. Ejemplo: `font-size: 1.8em`.
+2. **rem**: Se comporta de igual manera que **em**, a diferencia que el elemento padre siempre será **html**. Ejemplo: `font-size: 2em`.
+3. **vw**: Cuando hablamos de vw, quiere decir que 1vw representa un 1% del tamaño total del ancho de la pantalla viewport. Ejemplo: `font-size: 10vw`.
+4. **vh**: 1vh representa 1% del alto total de la pantalla viewport. Ejemplo: `font-size: 10vh`.
+5. **vmin y vmax**: 1vmin y 1vmax, representan el 1% del tamaño mas grande y mas chico del viewport respectivamente.
+
+####FONT-WEIGHT
+Especifica el ancho d elos caracteres dentro de un tag, los valores pueden ser normal o bold. o numeros de 100 a 900. Es decir, es usado cuando se quiere unsar una palabr en negrita.
+
+###GOOGLE FONTS
+Es una excelente pagina de donde se pueden descargar tipografias seguras y pueden importarse a nuestro archivo html, para luego ser utilizadas desde nuestro css.
+
+
+###FONT STYLE y FONT-ALIGN:
+Para definir un estilo de fuente se utilizan los siguientes codigos:
+
+- NORMAL: `font-style:normal`.
+- ITALIC: `font-style:italic`.
+- OBLIQUE: `font-style:oblique`.
+
+En el caso de la alineaciòn, esta podrìa ser:
+
+- `text-align:left`
+- `text-align:center`
+- `text-align:right`
+- `text-align:justify`
+
+###BLOCK VS INLINE
+
+Los objetos pueden ser de dos tipos, bloque o en linea.
+
+* BLOCK: Ocupan todo el espacio disponible. Ejemplo: p, h, listas.
+* INLINE: Ocupan el minimo espacio disponible. Ejemplo: span, strong, a, img.
+
+Los elementos tipo bloque si se pueden centrar, los elementos linea no.
+
+###BORDER BOX MODEL
+Es el sistema con el que se calcula cual es el espacio que ocupa un bojeto en una pagina web, este depende de: margen, bordes, espacio interno, ancho y alto. El tamaño completo entonces seria la suma del borde, margen y padding.
+
+Es posible cambiar el comportamiento de los objetos bloques o inline, se hace a traves de la propiedad **display**. Ejemplo:
+
+- `display:block`
+- `display:inline`
+
+De esta manera, un h puede ser online y una imagen puede ser bloque.
+
+
+###FLOATS
+Permite hacer flotar el contenido, imagenes, texto, divs. Se ocupa con:
+
+- `float:left`
+- `float:right`
+
+Al iniciar un **FLOAT**, SIEMPRE se debe limpiar, para que el comportamiento de los elementos que le sigan no sea erratico. Para ello se utiliza:
+
+- `clear:left`
+
+Una buena practica es incluir los elementos flotantes dentro de un div, cuya clase sea clear fix, de tal manera que al fina se limpie automaticamente. Ejemplo:
+
+	<div class="clearfix">
+		<div class="left">sad</div>
+		<div class="left">sad</div>
+		<div class="left">sad</div>
+		<div class="left">sad</div>
+	</div>
+
+Donde antes se encuentra el pseudo elemento:
+
+		.clearfix:before, .clearfix:after { content: ""; display: table; }
+		.clearfix:after { clear: both; }
+		.clearfix { *zoom: 1; }
+
+
+
+
+###BOX SIZING
+Es una serie de parametros que se configuran para evitar el border box model original, y plantear un modelo donde el comportamiento de los bloques se hace mas coherente.
+
+    html {
+    box-sizing: border-box;
+    }
+    *,*:before,*:after{
+    box-sizing:inherit;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

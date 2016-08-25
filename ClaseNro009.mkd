@@ -1,0 +1,57 @@
+#Desafío Latam
+
+##Clase Nro 9
+*22-Aug-16*
+
+Existe el SKETCH, que es para que se vea algo visual.
+
+Luego tenemos el Wireframe, para que se vea mas sobre la estructura, y los flujos de navegacion.
+
+Tambien rxisten los Mockups, que permiten de manera muy visual y contextual, explicar el funcionamiento de la pagina. Como herramientas tenemos Mocups y balsamiq.
+
+El ultimo paso es el prototipo, En este el usuario experimenta interactuando con la interfaz.
+
+###LAYOUT
+Es la estructura y orden de los componentes dentro de un sitio web.
+Es lo primero que se hace de un sitio. Sirve para entender cuales son los componentes mas importantes.
+
+Es bueno tenerlo claro antes de empezar.
+
+Existen tres tipos de diseños hoy dia. Son:
+
+* Estático.
+* Fluído o Líquido.
+* Responsivo (o adaptativo o sensible).
+
+Se detallan:
+
+1. Diseño Estático:Emplea un layout estatico con un ancho especifico, independiente de la resolucion de pantalla.
+Este tipo de diseño se utiliza pensando en un sólo dispositivo en mente. La unidad comun de medida es px.
+
+2. Diseño Fluido:Estos diseños fueron creados para no tener un tamaño definido, y permitir que los monitores puedan condicionar el tamaño de salida (se adaptan a la resolucion del monitor).
+Se usan medidas relativas, por lo general la unidad de medida es %.
+
+3. Diseño responsivo:Busca que la pagina se adapte a la pantalla y que el contenido pudea ser visualizado sin inconvenientes. Se basa en el uso de grillas o columnas. Que son alterables dependiendo del ancho de la pantalla,.
+
+
+###POSITION
+Existen varias posiciones, como el STATIC que es la posicion por defecto. Todos los elementos. de una pagina web estan situados estaticamente.
+
+
+####Position Absolute:
+Permite poner contenido en funcion del documento. Se puede ubicar en top, left, right y bottom.
+
+Es posible ocupar valores negativos.
+
+El se posiciona con respecto al elemento padre que tenga un position relative.
+
+####Position FIXED: 
+
+Se posiciona con respecto al viewport. Es decir la ventana de visualizacion. Es util para informacion que queremos que se mantenga constante en la pagina.
+
+Si se desea que se ubique de primero seria: con z-index:1
+
+
+####Position RELATIVE:
+Se debe definir top, left, right y bottom para que con respecto al primer padre estatico el se ubique. Si no se definen se comportará com static.
+
