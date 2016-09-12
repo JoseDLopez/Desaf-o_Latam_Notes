@@ -1,0 +1,55 @@
+#Desafío Latam
+
+##Clase Nro 15
+*30-Aug-16*
+
+##JAVASCRIPT (ECMAScript)
+
+Permite ejecutar codigo del lado delcliente, osea dentro del navegador.
+
+Con JavaScript se puede interactuar de forma directa con una pagina web.(Formularios, en fin elementos del DOM).
+
+###CARGANDO JAVASCRIPT
+Se puede cargar de tres maneras, es decir en el cuerpo del documento, con la etiqueta script, haciendo el link en el head, o en la misma etiqueta es decir inline.
+
+1. De manera externa: Usando un archivo con extension .js y llamandolo en nuestra pagina web con la etiqueta script dentro del head. Ejemplo: `<script src="assets/js/miarchivo.js"></script>`
+2. De manera interna: Escribiendo codigo js directamente en neustra pagina dentro de la etiqueta script.
+
+
+El **Inspector de elementos** nos será útil para encontrar posibles errores en nuestro codigo.
+
+Tambien nos permite ver que sucede en la consola.
+
+###VARIABLES
+Existen varias reglas para declaracion de variables en JS:
+
+1. Debe comenzar con una letra, pero si puede cotener numeros inclusive el signo $.
+2. Los nombres de variables toman en cuenta las mayusculas.
+3. Existen palabras reservadas por javascript que no pueden ser usadas como variables.
+
+Para definirlas se hace con var, de esta manera esa variable solo se puede usar en el documento. Sin el prefijo **var** la variabla se considera global.
+
+###I/O
+Para imprimir podemos usar el `console.log(variable)`
+Y para pedir informacion al ususario podemos usar el `var edad = window.prompt("Ingresa tu edad","");`
+
+###TIPOS DE DATOS
+Existen, Numeros, String, Booleanos, Array, Objects.
+
+Para verificar el tipo de variable podemos usar `typeof()`
+
+Para convertir de numero a texto usamos: `num.toString()`
+
+Y si deseamos convertir de textoa numero, se hace `parseInt()`
+
+
+
+###OPERADOR TERNARIO
+Muy útil para realizar comparaciones en una sola linea.
+
+`var resultado = edad >18? "eres mayor de edad" : "no lo es";`
+
+
+
+http://slides.com/mcantillana/frontend-modulo-8?token=tXf-3srK#/
+psw:g5

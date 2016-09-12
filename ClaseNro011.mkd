@@ -1,0 +1,35 @@
+#Desafío Latam
+
+##Clase Nro 11
+*24-Aug-16*
+
+##BOOTSTRAP
+
+Los creadores fueron Twitter, este es un marco de trabajo que proporciona ciertas caracteristicas adicionales al CSS.
+
+CDN: Content Delivery Network: es una manera distribuir contenido por internet, para permitir que cuando se solicita un recurso, sea el equipo mas cercano a traves de geolocalizacion.
+
+Como instalar BOOTSTRAP:
+
+Bower: Manejador de paquetes de framework.
+
+NPM: Es otro instalador de paquetes.
+
+Fuente: Se descarga la fuente desde la pagina de bootstrap.
+
+###ELEMENTOS DE BOOTSTRAP:
+
+1. JUMBOTRON: Es un elemento que se utiliza para hacer una especificacion diefernete. Ejemplo: `<div class="jumbotron">...</div>`
+
+2. CONTAINER: Define un tamaño que depende de la resolucion de la pantalla. Que depende de los break que tenemos. Cuando definimos un contenedor hace que el cntenido del este div, sea asocie a la patntalla y sea responsiove.
+
+3. PAGE HEADER: En conjunto con la etiqueta page, se usa small y permite tener un Titulo y un subtitulo.
+
+bootsnipp.
+
+Haremos el ejemplo del Landing:
+
+1. Primero creamos la carpeta del proyecto.
+2. Bajamos el bootsrap, y lo descomprimimos en la carpeta del proyecto.
+3. Creamos la carpeta images.
+4. Creamos un index.html

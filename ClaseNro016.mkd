@@ -1,0 +1,13 @@
+#Desafío Latam
+
+##Clase Nro 16
+*31-Aug-16*
+
+##ITERACIONES LOOPS
+
+Permite ejecutar repetitivamente ciertas acciones dependiendo del estado de una condicion.
+
+Para estos bucles, tenemos algo interesante que es el BREAK, que termina el bucle y nos lleva a la siguiente instruccion que sigue a la terminacion.
+
+Enel caso de continue, este termina la iteracion y continua con la siguiente.
+

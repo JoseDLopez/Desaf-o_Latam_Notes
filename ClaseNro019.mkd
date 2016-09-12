@@ -1,0 +1,33 @@
+#Desafío Latam
+
+##Clase Nro 19
+*05-Sep-16*
+
+Repaso clase anterior: Funciones anonimas, autoejecutables, alcance de las variables, variables locales y globales. 
+
+Maneras de establecer funciones autoejecutables.
+
+Es posible tener funciones anidadas
+
+Scope Chain, es el alcance en cadena que tienen las funciones anidadas al momento de compartir las variables.
+
+Hoisting: Es la propiedad que tiene js para declarar automaticamente las variables en el topedel documento (dentro del closure) aun cuando las variables esten declaradas despues.
+
+
+##ARREGLOS-ARRAYS
+
+Se definen entre corchetes y entre comillas dobles las variables.
+
+Ej:
+
+`var nombre_array = [];`
+
+
+
+###Iteracionde un arreglo
+Se realiza utilizando FOR EACH  
+Tiene solo dos parametros que seria valor e indice. Se hace utilizando otra funcion interna.
+
+###Usando metodo map
+
+

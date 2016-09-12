@@ -1,0 +1,42 @@
+#Desafío Latam
+
+##Clase Nro 22
+*09 September 2016*
+
+##JQUERY
+
+Es una biblioteca rápida, pequeña y rica en funciones JavaScript.
+
+Pagina Web: jquery.com
+Descargar: jquery.com/download/
+
+Lo vamos a usara traves de CDN (Content Delivery Network)
+
+
+Usamos el CDN de preferencia, en este caso GOOGLE.
+
+Y copiamos el script y lo pegamos en donde queramos puede ser cabecera o puede ser footer.
+
+Donde coloquees el script, a partir de ahi es que puedes desarollar tu codigo .
+
+
+La otra manera es descargando los archivos y guardandolos localmente.
+
+
+
+###MAnejo de JQUERY
+
+Existe una funcion que es global llamada Jquery, y  puede ser llamada con su nombre o con el signo peso: `jQuery` o `$`.
+
+Esta nos permite seleccionar elementos del DOM.
+
+
+
+**APPEND**: Siempre a la cola, agrega loque se haya escrito a la cola. Ejemplo:
+`$("body").append("hola")`
+
+
+
+Para trabajar con tablas enjquery es recomendado usar datatable. buscar en google.
+
+
