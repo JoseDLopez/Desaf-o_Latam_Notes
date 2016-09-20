@@ -1,0 +1,46 @@
+Clase 23
+12 Sep
+
+##JQUERY
+
+Es una biblioteca, que permite hacer cosas como recorrer y manipular el documento HTML, manejar eventos, animar y utilizar ajax, sea mucho mas simple.
+
+###Ventajas y desventajas JQUERY
+
+Como **ventajas** presenta, mayor compatibilidad de javascript, posibilidad de hacer efectos y llamados Ajax con poco codigo. Infinidad de plugins.
+
+Las **desventajas** pueden ser incompatibilidad con otros frameworks, y agregar peso innecesario en el documento.
+
+###Agregando JQUERY
+
+Para agregar JQuery a tu domcumento debemos agregar la direccion de donde se ubica el archivo de jquery, puede ser de manera local o de manera remota.
+
+###FUNCION JQUERY
+
+Al trabajar con la biblioteca Jquery podemos iniciar la llamada con la palabra **jQuery** o con el signo **$**.
+
+El signo **$** representa una variable global que tiene como valor: jQuery
+
+###El metodo .READY
+
+Ocupa el siguiente codigo:
+
+	$(document).ready(function() {
+	// Handler for .ready() called.
+	});
+
+Y funciona de tal manera que se ejecuta cuando el DOM esta cargado y listo para ser manipulado. De esta manera nos aseguramos que el codigo se ejecute despues de que el navegador termina de cargar completamente el sitio, incluyendo imagenes y otros assets.
+
+
+###SELECTORES
+
+Los selectores de jQuery permiten seleccionar y manipular elementos de HTML. Se utilizan para encontrar o seleccionar elementos HTML en funcion de ID, claess, tipos, atributos, valores de atributos y mucho mas.
+
+Esta basado en los selectores CSS existentes y ademas yiene algunos selectores personalizados propios.
+
+Todos los selectores comienzan con el signo de peso que representa el jQuery. Y todos los selectores devuelven un objeto jQuery.
+
+###MANIPULACION DEL DOM
+Los metodos de manipulacion de jQuery nos permiten modificar el DOM de la pagina usando una sintaxis que es mucho mas amigable que el proporcionado pro metodos de manipulacion DOM nativos.
+
+Los metodos de manipulacion devuelven el objeto jQuery en el que fueron llamados, lo que significa que podemos encadenar o combinarlos con otros metodos de jQuery.
