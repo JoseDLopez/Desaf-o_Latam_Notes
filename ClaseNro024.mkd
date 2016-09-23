@@ -1,0 +1,28 @@
+##Clase 24 DESAFIO LATAM
+
+##EVENTOS EN JQUERY
+
+Es posible ejecutar eventos cuando la condicion de ese evento se cumple. Es posible hacer que un evento se dispare al clickear o mover.
+
+El gestor de javascript maneja una cola de eventos, esos se ejecutan asincronamente.
+
+###Control de eventos
+
+jQuery permite que la interaccion del usuario con una pagina web sea mas facil. Esto significa que es posible escribir código que se ejecuta cuando
+un usuario realiza alguna accion determinada.
+
+Al producirse este evento, el programa procede a ejecutar la funcion establecida.
+
+###Evitar comportamiento por defecto.
+
+Dentro de un llamado es posible usar "prevent Default" para evitar un comportamiento por defecto, como redirigir al hacer click en un link o en un envío de formulario.
+
+###Propagacion de eventos:
+
+Cada vez que se hace click en una de las etiquetas, un evento de click es disparado por ese link.
+
+Luego, se propaga hacia arriba en el arbol DOM, provocando que en cada uno de sus ancestros se ejecuten el controlador de evento click.
+
+Esto significa que cada vez que se haga click en uno de los links, se esta haciendo click en todos los eventos del cuerpo.
+
+
